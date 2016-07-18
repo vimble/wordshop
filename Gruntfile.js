@@ -46,7 +46,7 @@ module.exports = function(grunt) {
     uglify: {
       style: {
         files: {
-          "build/js/custom.min.js": ["build/js/custom.js"]
+          "build/js/min/include.min.js": ["build/js/include.js"]
         }
       }
     },
@@ -72,7 +72,7 @@ module.exports = function(grunt) {
       },
       symbols: {
         files: {
-          "build/img/symbols.svg": ["build/img/*.svg", "!build/img/logo.svg"]
+          "build/img/symbols.svg": ["build/img/*.svg"]
         }
       }
     },
@@ -136,7 +136,7 @@ module.exports = function(grunt) {
         tasks: ["copy:html"]
       },
       style: {
-        files: ["sass/**/*.{scss,sass}"],
+        files: ["assets/scss/**/*.{scss,sass}"],
         tasks: ["sass", "postcss", "csso"],
         options: {
           spawn: false
