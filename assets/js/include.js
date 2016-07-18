@@ -6,6 +6,17 @@ jQuery(document).ready(function($){
     dots: true
   });
 
+  //Student textslider
+  $(".works__slider").slick();
+
+  //Partners textslider
+  $(".partners__slider").slick({
+    arrows: false,
+    dots: true,
+    slidesToShow: 6,
+    slidesToScroll: 6
+  });
+
   //Faculty img change
   $("#advList").find(".faculty__item").hover(function(event){
     var imgpath = $(this).attr("data-img");
